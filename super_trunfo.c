@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
     /*Inicialização de variáveis*/
-    char estado1, estado2, cidade1[20], cidade2[20], codigo1[20], codigo2[20];
+    char estado1, estado2, cidade1[50], cidade2[50], codigo1[50], codigo2[50];
     int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
     float area1, area2, pib1, pib2; 
 
