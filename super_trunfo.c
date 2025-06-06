@@ -71,7 +71,7 @@ int main(int argc, char const *argv[])
     printf("Vamos ao resultado? Compare as cartas!\n\n");
 
     //Print da carta 01
-    printf("Carta 01 \n\n"); 
+    printf("Carta 01 \n"); 
     printf("--------------------------------\n");
     printf("%s [ %c%s ] \n", cidade1, estado1, codigo1);
     printf("--------------------------------\n");
@@ -79,10 +79,10 @@ int main(int argc, char const *argv[])
     printf("Area: %f km2 \n", area1);
     printf("PIB: %f Reais \n", pib1);
     printf("Pontos turisticos: %d\n", pontos_turisticos1);
-    printf("--------------------------------\n");  
+    printf("--------------------------------\n\n");  
 
     //Print da carta 02
-    printf("Carta 02 \n\n"); 
+    printf("Carta 02 \n"); 
     printf("--------------------------------\n");
     printf("%s [ %c%s ] \n", cidade2, estado2, codigo2);
     printf("--------------------------------\n");
