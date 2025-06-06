@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
     scanf("%d", &pontos_turisticos1);
 
     //Espaçamento
-    printf("\n\n");
+    printf("\n");
 
     /*Coleta de dados do cliente - Carta 02*/
     printf("Agora, insira os dados da segunda carta. \n\n");
@@ -66,12 +66,15 @@ int main(int argc, char const *argv[])
     scanf("%d", &pontos_turisticos2);
 
     //Espaçamento
-    printf("\n\n");
+    printf("\n");
+
+    printf("Vamos ao resultado? Compare as cartas!\n\n");
 
     //Print da carta 01
+    printf("Carta 01 \n\n"); 
     printf("--------------------------------\n");
-    printf("Carta 01 \n"); 
     printf("%s [ %c%s ] \n", cidade1, estado1, codigo1);
+    printf("--------------------------------\n");
     printf("Populacao: %d pessoas\n", populacao1);
     printf("Area: %f km2 \n", area1);
     printf("PIB: %f Reais \n", pib1);
@@ -79,9 +82,10 @@ int main(int argc, char const *argv[])
     printf("--------------------------------\n");  
 
     //Print da carta 02
+    printf("Carta 02 \n\n"); 
     printf("--------------------------------\n");
-    printf("Carta 02 \n"); 
     printf("%s [ %c%s ] \n", cidade2, estado2, codigo2);
+    printf("--------------------------------\n");
     printf("Populacao: %d pessoas\n", populacao2);
     printf("Area: %f km2 \n", area2);
     printf("PIB: %f Reais \n", pib2);
