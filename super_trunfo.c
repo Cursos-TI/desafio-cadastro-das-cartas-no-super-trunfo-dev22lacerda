@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[]) {
-    
+int main(int argc, char const *argv[])
+{
     /*Inicialização de variáveis*/
     char estado1, estado2, cidade1[50], cidade2[50], codigo1[50], codigo2[50];
     int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
@@ -68,14 +68,17 @@ int main(int argc, char const *argv[]) {
     //Espaçamento
     printf("\n");
 
-    printf("Vamos ao resultado? Compare as cartas!\n\n");
+    printf("Vamos ao resultado? Saiba qual carta ganhou!\n\n");
 
-    //Calculando Densidade Populacional e PIB per capita = Inicializando novas variáveis
+    //Calculando Densidade Populacional, PIB per capita e o Super Poder
     float densidade1 = populacao1 / area1;
     float pibpercapita1 = pib1 / populacao1;
 
     float densidade2 = populacao2 / area2;
     float pibpercapita2 = pib2 / populacao2; 
+
+    float superpoder1 = populacao1 + area1 + pib1 + pontos_turisticos1 + pibpercapita1 - densidade1;
+    float superpoder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + pibpercapita2 - densidade2;
 
     //Print da carta 01
     printf("Carta 01 \n"); 
@@ -101,15 +104,34 @@ int main(int argc, char const *argv[]) {
     printf("Pontos turisticos: %d\n", pontos_turisticos2);
     printf("Densidade populacional: %.2f hab/km\n", densidade2);
     printf("PIB per Capita: %.2f Reais\n", pibpercapita2);
+    printf("--------------------------------\n\n");
+
     printf("--------------------------------\n");
+    printf("Comparacao\n");
+    printf("--------------------------------\n\n");
+
+    //Print e aplicação da comparação
+    printf("Codigo da carta vencedora:\n");
+    printf("Se o resultado for (1), a Carta 01 venceu.\n");
+    printf("Se o resultado for (0), a Carta 02 venceu.\n\n");
+
+    printf("Populacao: Codigo da carta vencedora = (%d)\n", populacao1 > populacao2);
+    printf("Area: Codigo da carta vencedora = (%d)\n", area1 > area2);
+    printf("PIB: Codigo da carta vencedora = (%d)\n", pib1 > pib2);
+    printf("Pontos Turisticos: Codigo da carta vencedora = (%d)\n", pontos_turisticos1 > pontos_turisticos2);
+    printf("Densidade Populacional: Codigo da carta vencedora = (%d)\n", densidade1 < densidade2);
+    printf("PIB per Capita: Codigo da carta vencedora = (%d)\n", pibpercapita1 > pibpercapita2);
+    printf("Super Poder: Codigo da carta vencedora = (%d)\n", superpoder1 > superpoder2);
+
+    printf("\n\n");
 
     //Mensagem de encerramento
+    printf("..:Parabens por ganhar essa rodada!:..");
     printf("\n\n");
-    printf("Obrigado por jogar!");
+    printf(".:Obrigado por jogar!:.");
     printf("\n\n");
     printf("..:Game Over:..");
     printf("\n\n");
 
     return 0;
 }
-
