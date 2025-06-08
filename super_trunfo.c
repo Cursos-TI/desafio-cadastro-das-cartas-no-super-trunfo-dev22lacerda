@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
+    
     /*Inicialização de variáveis*/
     char estado1, estado2, cidade1[50], cidade2[50], codigo1[50], codigo2[50];
     int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
     printf("Qual e a area (em km2)? \n");
     scanf("%f", &area1);
 
-    printf("Qual e o PIB? \n");
+    printf("Qual e o PIB? (reais) \n");
     scanf("%f", &pib1);
 
     printf("Quantos pontos turisticos ela tem? \n");
@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
     printf("Qual e a area (em km2)? \n");
     scanf("%f", &area2);
 
-    printf("Qual e o PIB? \n");
+    printf("Qual e o PIB? (Reais) \n");
     scanf("%f", &pib2);
 
     printf("Quantos pontos turisticos ela tem? \n");
@@ -70,15 +70,24 @@ int main(int argc, char const *argv[])
 
     printf("Vamos ao resultado? Compare as cartas!\n\n");
 
+    //Calculando Densidade Populacional e PIB per capita = Inicializando novas variáveis
+    float densidade1 = populacao1 / area1;
+    float pibpercapita1 = pib1 / populacao1;
+
+    float densidade2 = populacao2 / area2;
+    float pibpercapita2 = pib2 / populacao2; 
+
     //Print da carta 01
     printf("Carta 01 \n"); 
     printf("--------------------------------\n");
     printf("%s [ %c%s ] \n", cidade1, estado1, codigo1);
     printf("--------------------------------\n");
     printf("Populacao: %d pessoas\n", populacao1);
-    printf("Area: %f km2 \n", area1);
-    printf("PIB: %f Reais \n", pib1);
+    printf("Area: %.2f km2 \n", area1);
+    printf("PIB: %.2f Reais \n", pib1);
     printf("Pontos turisticos: %d\n", pontos_turisticos1);
+    printf("Densidade populacional: %.2f hab/km2\n", densidade1);
+    printf("PIB per Capita: %.2f Reais\n", pibpercapita1);
     printf("--------------------------------\n\n");  
 
     //Print da carta 02
@@ -87,9 +96,11 @@ int main(int argc, char const *argv[])
     printf("%s [ %c%s ] \n", cidade2, estado2, codigo2);
     printf("--------------------------------\n");
     printf("Populacao: %d pessoas\n", populacao2);
-    printf("Area: %f km2 \n", area2);
-    printf("PIB: %f Reais \n", pib2);
+    printf("Area: %.2f km2 \n", area2);
+    printf("PIB: %.2f Reais \n", pib2);
     printf("Pontos turisticos: %d\n", pontos_turisticos2);
+    printf("Densidade populacional: %.2f hab/km\n", densidade2);
+    printf("PIB per Capita: %.2f Reais\n", pibpercapita2);
     printf("--------------------------------\n");
 
     //Mensagem de encerramento
@@ -101,3 +112,4 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+
